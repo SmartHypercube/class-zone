@@ -9,8 +9,8 @@ error_reporting(0);
   $ADMIN="王子博";
   $TEACHER="樊新梅老师";
   $SQLHOST="localhost";
-  $SQLUSER="root";
-  $SQLPASSWORD="";
+  $SQLUSER="username";
+  $SQLPASSWORD="password";
   $SQLDBNAME="zonetest";
   $ADMINPASS="123456";
   
@@ -18,18 +18,20 @@ error_reporting(0);
   function SQLOpen()
   {
     global $SQLHOST, $SQLUSER, $SQLPASSWORD, $SQLDBNAME;
-    $con=mysql_connect($SQLHOST,$SQLUSER,$SQLPASSWORD);
-    if(!$con)
-      die('对不起，发生严重错误：无法连接数据库。');
-    mysql_select_db($SQLDBNAME,$con);
+    $con=mysqli_connect($SQLHOST,$SQLUSER,$SQLPASSWORD,$SQLDBNAME);
+    if(mysqli_connect_errno())
+      die('对不起，发生严重错误：无法连接数据库。' . mysqli_connect_error());
     return $con;
   }
   
   function SQLSend($con,$sql)
-  {return mysql_query($sql,$con);}
+  {return mysqli_query($con,$sql);}
   
   function SQLClose($con)
-  {mysql_close($con);}
+  {mysqli_close($con);}
+  
+  function mysql_num_rows($a){return mysqli_num_rows($a);}
+  function mysql_fetch_array($a){return mysqli_fetch_array($a);}
   
   function ckPassword($password)
   {
