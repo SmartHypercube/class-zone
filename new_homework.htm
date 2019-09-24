@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<!-- 版权声明
+班级空间模板 by Fasd
+以 知识共享-署名-非商业性使用 3.0 中国大陆 许可协议进行许可。
+-->
+<html>
+  <head>
+    <title>发布新作业</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <h1>发布新作业</h1>
+    <form action="new_homework.php" method="post">
+      <label for="subject">科目（必填）</label>
+        <select name="subject" id="subject">
+          <option value="1">班级</option>
+          <option value="2">语文</option>
+          <option value="3">数学</option>
+          <option value="4">英语</option>
+          <option value="5">物理</option>
+          <option value="6">化学</option>
+          <option value="7">生物</option>
+          <option value="8">政治</option>
+          <option value="9">历史</option>
+          <option value="10">地理</option>
+          <option value="11">音乐</option>
+          <option value="12">美术</option>
+          <option value="13">体育</option>
+          <option value="14">信息</option>
+          <option value="15">通用</option>
+          <option value="16">其他</option>
+        </select><br />
+      <label for="description">内容（必填）</label><input type="text" name="description" id="description" /><br />
+      <label for="note">备注</label><input type="text" name="note" id="note" /><br />
+      <label for="deadline">几天后交？（必填，数字）</label><input type="text" name="deadline" id="deadline" value="1" /><br />
+      <label for="password">管理密码</label><input type="password" name="password" id="password" /><br />
+      <input type="submit" value="提交" />
+    </form>
+  </body>
+</html>
