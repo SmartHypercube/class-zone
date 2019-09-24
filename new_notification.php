@@ -14,7 +14,7 @@
 <?php
   include_once("lib.php");
   
-  if($_POST["password"]!=$ADMINPASS)
+  if(!ckPassword($_POST["password"]))
     die('密码错误！只有管理员可以发布通告。如果忘密码请<a href="mailto:fasd.snake@gmail.com">联系开发者</a>。</p><a href="new_notification.htm">返回上一页</a><br /><a href="index.php">返回首页</a></body></html>');
 
 //标题
@@ -76,4 +76,4 @@
   SQLClose($con);
 ?>
 
-</p><a href="new_notification.htm">再发一篇</a><br /><a href="index.php">返回首页</a></body></html>
+</p><a href="new_notification.htm">再发一篇</a><br /><a href="notifications.php">返回班务布告板</a><br /><a href="index.php">返回首页</a></body></html>

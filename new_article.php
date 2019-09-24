@@ -40,4 +40,4 @@
   SQLClose($con);
 ?>
 
-</p><a href="new_article.htm">再发一篇</a><br /><a href="index.php">返回首页</a></body></html>
+</p><a href="new_article.htm">再发一篇</a><br /><a href="articles.php">返回文章列表</a><br /><a href="index.php">返回首页</a></body></html>

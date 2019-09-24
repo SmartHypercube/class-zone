@@ -48,4 +48,4 @@
   SQLClose($con);
 ?>
 
-</p><a href="index.php">返回首页</a></body></html>
+</p><a href="contacts.php">返回通讯录</a><br /><a href="index.php">返回首页</a></body></html>

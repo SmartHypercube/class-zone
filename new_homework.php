@@ -14,8 +14,8 @@
 <?php
   include_once("lib.php");
   
-  if($_POST["password"]!=$ADMINPASS)
-    die('密码错误！只有管理员可以发布通告。如果忘密码请<a href="mailto:fasd.snake@gmail.com">联系开发者</a>。</p><a href="new_homework.htm">返回上一页</a><br /><a href="index.php">返回首页</a></body></html>');
+  if(!ckPassword($_POST["password"]))
+    die('密码错误！只有管理员可以发布作业。如果忘密码请<a href="mailto:fasd.snake@gmail.com">联系开发者</a>。</p><a href="new_homework.htm">返回上一页</a><br /><a href="index.php">返回首页</a></body></html>');
 
 //科目
   $subject=$_POST["subject"];

@@ -1,38 +1,8 @@
 <?php
   include_once("lib.php");
+  PrintHead($TITLE);
 ?>
 
-<!DOCTYPE HTML>
-<!-- 模板原版权声明
-	Helios 1.0 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<!-- 版权声明
-	班级空间模板 by Fasd
-	以 知识共享-署名-非商业性使用 3.0 中国大陆 许可协议进行许可。原作者 HTML5 UP 由 Fasd 创建本演绎作品
--->
-<html>
-	<head>
-		<?php echo "<title>".$TITLE."</title>"; ?>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css" />
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
-	</head>
 	<body class="homepage">
 
 		<!-- Header -->
@@ -70,38 +40,8 @@
 							<a href="#notifications" class="button circled scrolly">开始</a>
 						</footer>
 					</div>
-				
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.php">首页</a></li>
-							<li>
-								<span>正文</span>
-								<ul>
-									<li><a href="#notifications">班务布告板</a></li>
-									<li><a href="#homework">作业数据库</a></li>
-									<li><a href="#articles">文章</a></li>
-									<li><a href="#contacts">通讯录</a></li>
-								</ul>
-							</li>
-							<li>
-								<span>传送门</span>
-								<ul>
-									<?php echo '<li><a href="'.$BBS.'">我们的论坛</a></li>'; ?>
-									<?php echo '<li><a href="'.$QGROUP.'">我们的群</a></li>'; ?>
-								</ul>
-							</li>
-							<li>
-								<span>关于</span>
-								<ul>
-									<li><a href="about.php">关于这个网站</a></li>
-									<li><a href="about.php#fasd">联系开发者</a></li>
-									<li><a href="about.php#join">你也想要这样的网站吗？</a></li>
-									<li><a href="about.php#license">版权声明</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
+
+<?php PrintNav(); ?>
 
 			</div>
 			
@@ -186,32 +126,4 @@
   </div>
 </div>
 
-		<!-- Footer -->
-			<div id="footer">
-				<div class="container">
-
-					<div class="row">
-						<div class="12u">
-							
-							<!-- Contact -->
-								<section class="contact">
-<?php echo '<p>'.$TITLE.' | 技术支持：<a href="mailto:fasd.snake@gmail.com">Fasd工作室</a></p>'; ?>
-								</section>
-							
-							<!-- Copyright -->
-								<div class="copyright">
-									<ul class="menu">
-										<li>Fasd工作室 保留所有权利，除非您认真阅读并理解了我们的<a href="about.php#license">版权声明</a>。</li>
-										<li>模板设计：<a href="http://html5up.net/">HTML5 UP</a>。</li>
-										<li>一些图片是由<a href="http://mdomaradzki.deviantart.com/">Michael Domaradzki</a>提供的。</li>
-									</ul>
-								</div>
-							
-						</div>
-					
-					</div>
-				</div>
-			</div>
-
-	</body>
-</html>
+<?php PrintFooter(); ?>
